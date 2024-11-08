@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/mortgage.css" />
+    <script src="assets/mortgage.js" defer></script>
+  </head>
+  <body>
+    <div class="all-in-container">
+      <div class="container">
+        <div class="mortgage-header">
+          <h1>Mortgage Calculator</h1>
+          <a href="#">Clear All</a>
+        </div>
+        <div class="payment-container">
+          <div class="mortgage-amount">
+            <h3>Mortgage Amount</h3>
+            <div class="inputs">
+              <span>£</span><input type="text" id="miktar" />
+            </div>
+          </div>
+          <div class="mortgage-term">
+            <h3>Mortgage Term</h3>
+            <div class="inputs">
+              <input type="text" id="sure" /><span>years</span>
+            </div>
+          </div>
+          <div class="interest-rate">
+            <h3>Interest Rate</h3>
+            <div class="inputs">
+              <input type="text" id="oran" /><span>%</span>
+            </div>
+          </div>
+          <div class="mortgage-type">
+            <h3>Mortgage Type</h3>
+            <div class="type-inputs">
+              <div class="a">
+                <input type="radio" name="" id="" /><a href="#">Repayment</a>
+              </div>
+              <div class="b">
+                <input type="radio" name="" id="" /><a href="#"
+                  >Interest Only</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="calculate">
+            <button id="hesapla">
+              <img
+                src="assets/images/calculator.svg"
+                alt="calculator"
+              />Calculate Repayments
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="result-show-container">
+        <img src="assets/images/result-calculator.svg" alt="" />
+      <h1>Results shown here</h1>
+      <p>
+        Complete the form and click “calculate repayments” to see what your
+        monthly repayments would be.
+      </p>
+        <!-- <div class="result-container">
+          <h1>Your results</h1>
+          <p>
+            Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click “calculate
+            repayments” again.
+          </p>
+          <div class="repayment-container">
+            <h2>Your monthly repayments</h2>
+            <h1 id="sonuc">£1,797.74</h1>
+            <p>Total you'll repay over the term</p>
+            <h6>£539,322.94</h6>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </body>
+</html>

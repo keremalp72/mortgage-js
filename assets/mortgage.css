@@ -1,0 +1,574 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  background-color: #e4f4fd;
+}
+.container {
+  background-color: white;
+  box-shadow: 0px 32px 64px 0px #1330411a;
+  padding: 32px 24px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+.mortgage-header {
+}
+.mortgage-header h1 {
+  font-size: var(--font-sizetext-preset-2);
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 8px;
+  color: #133041;
+}
+.mortgage-header a {
+  color: #4e6e7e;
+  display: inline-block;
+}
+.payment-container h3 {
+  color: #4e6e7e;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+.payment-container span {
+  padding: 12.5px 16px;
+  background: #e4f4fd;
+  border-radius: 4px;
+  border: 1px solid var(--color-slate-500, #6b94a8);
+  font-size: var(--font-sizetext-preset-3);
+  font-weight: 700;
+  line-height: 22.5px;
+  color: #4e6e7e;
+  display: inline-block;
+}
+.payment-container input {
+  font-size: var(--font-sizetext-preset-3);
+  font-weight: 700;
+  line-height: 22.5px;
+  border: 1px solid var(--color-slate-500, #6b94a8);
+  padding-inline: 16px;
+  width: 100%;
+}
+.payment-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+.mortgage-amount {
+}
+
+.inputs {
+  display: flex;
+}
+.mortgage-type {
+}
+.type-inputs {
+  display: flex;
+  flex-direction: column;
+}
+.mortgage-type input {
+  width: auto;
+}
+.mortgage-type a {
+  text-decoration: none;
+  font-size: var(--font-sizetext-preset-3);
+  font-weight: 700;
+  line-height: 22.5px;
+  color: #133041;
+}
+.a {
+  display: flex;
+  align-items: center;
+  padding: 12.5px 16px;
+  gap: 16px;
+  border: 1px solid var(--color-slate-500, #6b94a8);
+  margin-bottom: 12px;
+}
+.b {
+  display: flex;
+  align-items: center;
+  padding: 12.5px 16px;
+  gap: 16px;
+  border: 1px solid var(--color-slate-500, #6b94a8);
+}
+
+.calculate {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+}
+.calculate button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 46.5px;
+  font-size: var(--font-sizetext-preset-3);
+  font-weight: 700;
+  line-height: 22.5px;
+  gap: 12px;
+  background-color: #d8db2f;
+  border: none;
+  border-radius: 50px;
+  color: #133041;
+  width: 100%;
+}
+.result-show-container {
+  background-color: var(--color-slate-900, #133041);
+  box-shadow: 0px 32px 64px 0px #1330411a;
+  text-align: center;
+  padding: 40px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+.result-show-container h1 {
+  font-size: var(--font-sizetext-preset-2);
+  font-weight: 700;
+  line-height: 30px;
+  color: white;
+}
+.result-show-container p {
+  font-size: var(--font-sizetext-preset-4);
+  font-weight: 500;
+  line-height: 24px;
+  color: #9abed5;
+}
+.result-container h1 {
+  margin-bottom: 16px;
+}
+.result-container p {
+  margin-bottom: 40px;
+}
+.repayment-container {
+  text-align: left;
+  background-color: #0e2431;
+  border-radius: 8px;
+  padding: 32px;
+  border-top: 4px solid #d8db2f;
+}
+.repayment-container h2 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #9abed5;
+}
+.repayment-container h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 70px;
+  border-bottom: 1px solid #9abed540;
+  color: #d8db2f;
+}
+.repayment-container h6 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: white;
+}
+.repayment-container p:last-child {
+  padding-top: 32px;
+}
+@media only screen and (min-width: 765px) {
+  body {
+    padding: 40px;
+  }
+  .container {
+    background-color: white;
+    box-shadow: 0px 32px 64px 0px #1330411a;
+    padding: 32px 24px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+
+  .mortgage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mortgage-header h1 {
+    font-size: var(--font-sizetext-preset-2);
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 0px;
+    color: #133041;
+  }
+  .mortgage-header a {
+    color: #4e6e7e;
+    display: inline-block;
+  }
+  .payment-container h3 {
+    color: #4e6e7e;
+    margin-bottom: 12px;
+    margin-top: 40px;
+  }
+  .payment-container span {
+    padding: 12.5px 16px;
+    background: #e4f4fd;
+    border-radius: 4px;
+    border: 1px solid var(--color-slate-500, #6b94a8);
+    font-size: var(--font-sizetext-preset-3);
+    font-weight: 700;
+    line-height: 22.5px;
+    color: #4e6e7e;
+    display: inline-block;
+  }
+  .payment-container input {
+    font-size: var(--font-sizetext-preset-3);
+    font-weight: 700;
+    line-height: 22.5px;
+    border: 1px solid var(--color-slate-500, #6b94a8);
+    padding-inline: 16px;
+    width: 100%;
+  }
+  .payment-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+  .mortgage-amount {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+  }
+
+  .inputs {
+    display: flex;
+  }
+  .mortgage-type {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+  }
+  .interest-rate {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    margin-left: 24px;
+  }
+  .type-inputs {
+    display: flex;
+    flex-direction: column;
+  }
+  .mortgage-type input {
+    width: auto;
+  }
+  .mortgage-type a {
+    text-decoration: none;
+    font-size: var(--font-sizetext-preset-3);
+    font-weight: 700;
+    line-height: 22.5px;
+    color: #133041;
+  }
+  .a {
+    display: flex;
+    align-items: center;
+    padding: 12.5px 16px;
+    gap: 16px;
+    border: 1px solid var(--color-slate-500, #6b94a8);
+    margin-bottom: 12px;
+  }
+  .b {
+    display: flex;
+    align-items: center;
+    padding: 12.5px 16px;
+    gap: 16px;
+    border: 1px solid var(--color-slate-500, #6b94a8);
+  }
+
+  .calculate {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+  }
+  .calculate button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 46.5px;
+    font-size: var(--font-sizetext-preset-3);
+    font-weight: 700;
+    line-height: 22.5px;
+    gap: 12px;
+    background-color: #d8db2f;
+    border: none;
+    border-radius: 50px;
+    color: #133041;
+    width: 100%;
+  }
+  .result-show-container {
+    background-color: var(--color-slate-900, #133041);
+    box-shadow: 0px 32px 64px 0px #1330411a;
+    text-align: center;
+    padding: 40px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+  .result-show-container h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    color: white;
+  }
+  .result-show-container p {
+    font-size: var(--font-sizetext-preset-4);
+    font-weight: 500;
+    line-height: 24px;
+    color: #9abed5;
+  }
+  .result-container h1 {
+    margin-bottom: 16px;
+  }
+  .result-container p {
+    margin-bottom: 40px;
+  }
+  .repayment-container {
+    text-align: left;
+    background-color: #0e2431;
+    border-radius: 8px;
+    padding: 32px;
+    border-top: 4px solid #d8db2f;
+  }
+  .repayment-container h2 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #9abed5;
+  }
+  .repayment-container h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 70px;
+    border-bottom: 1px solid #9abed540;
+    color: #d8db2f;
+  }
+  .repayment-container h6 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    color: white;
+  }
+  .repayment-container p:last-child {
+    padding-top: 32px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  body {
+    padding: 209px 216px;
+  }
+  .all-in-container {
+    display: flex;
+  }
+  .container {
+    background-color: white;
+    box-shadow: 0px 32px 64px 0px #1330411a;
+    padding: 40px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+
+  .mortgage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mortgage-header h1 {
+    font-size: var(--font-sizetext-preset-2);
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 0px;
+    color: #133041;
+  }
+  .mortgage-header a {
+    color: #4e6e7e;
+    display: inline-block;
+  }
+  .payment-container h3 {
+    color: #4e6e7e;
+    margin-bottom: 12px;
+    margin-top: 40px;
+  }
+  .payment-container span {
+    padding: 12.5px 16px;
+    background: #e4f4fd;
+    border-radius: 4px;
+    border: 1px solid var(--color-slate-500, #6b94a8);
+    font-size: var(--font-sizetext-preset-3);
+    font-weight: 700;
+    line-height: 22.5px;
+    color: #4e6e7e;
+    display: inline-block;
+  }
+  .payment-container input {
+    font-size: var(--font-sizetext-preset-3);
+    font-weight: 700;
+    line-height: 22.5px;
+    border: 1px solid var(--color-slate-500, #6b94a8);
+    padding-inline: 16px;
+    width: 100%;
+  }
+  .payment-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+  .mortgage-amount {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+  }
+
+  .inputs {
+    display: flex;
+  }
+  .mortgage-term {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    width: auto;
+  }
+  .mortgage-type {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+  }
+  .interest-rate {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    margin-left: 24px;
+  }
+  .type-inputs {
+    display: flex;
+    flex-direction: column;
+  }
+  .mortgage-type input {
+    width: auto;
+  }
+  .mortgage-type a {
+    text-decoration: none;
+    font-size: var(--font-sizetext-preset-3);
+    font-weight: 700;
+    line-height: 22.5px;
+    color: #133041;
+  }
+  .a {
+    display: flex;
+    align-items: center;
+    padding: 12.5px 16px;
+    gap: 16px;
+    border: 1px solid var(--color-slate-500, #6b94a8);
+    margin-bottom: 12px;
+  }
+  .b {
+    display: flex;
+    align-items: center;
+    padding: 12.5px 16px;
+    gap: 16px;
+    border: 1px solid var(--color-slate-500, #6b94a8);
+  }
+
+  .calculate {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+  }
+  .calculate button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 46.5px;
+    font-size: var(--font-sizetext-preset-3);
+    font-weight: 700;
+    line-height: 22.5px;
+    gap: 12px;
+    background-color: #d8db2f;
+    border: none;
+    border-radius: 50px;
+    color: #133041;
+    width: 100%;
+  }
+  .result-show-container {
+    background-color: #133041;
+    box-shadow: 0px 32px 64px 0px #1330411a;
+    text-align: center;
+    padding: 40px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+  .result-show-container h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    color: white;
+  }
+  .result-show-container p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #9abed5;
+  }
+  .result-container h1 {
+    margin-bottom: 16px;
+  }
+  .result-container p {
+    margin-bottom: 40px;
+  }
+  .repayment-container {
+    text-align: left;
+    background-color: #0e2431;
+    border-radius: 8px;
+    padding: 32px;
+    border-top: 4px solid #d8db2f;
+  }
+  .repayment-container h2 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #9abed5;
+  }
+  .repayment-container h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 70px;
+    border-bottom: 1px solid #9abed540;
+    color: #d8db2f;
+  }
+  .repayment-container h6 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    color: white;
+  }
+  .repayment-container p:last-child {
+    padding-top: 32px;
+  }
+}
